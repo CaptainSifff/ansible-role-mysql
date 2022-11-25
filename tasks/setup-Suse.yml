@@ -4,3 +4,9 @@
     name: "{{ mysql_packages }}"
     state: present
   register: suse_mysql_install_packages
+
+- name: Ensure python-xml is there.
+  ansible.builtin.package:
+    name: "python-xml"
+    state: present
+  register: suse_install_python_xml
